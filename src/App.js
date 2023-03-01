@@ -13,8 +13,8 @@ function App() {
   return (
     <div className='App'>
       <header className='App-header'>
-        <Header />
         <BrowserRouter>
+          <Header />
           <Routes>
             <Route path={HOME_ROUTE} element={<HomePage />} />
             <Route path={`${EVENT_ROUTE}/:id`} element={<EventPage />} />

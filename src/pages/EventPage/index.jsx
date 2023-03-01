@@ -83,7 +83,7 @@ function EventPage() {
           <div onClick={toggleBookmarkHandler} className='ep-bookmark'>
             <i
               className={
-                isBookmark ? 'fa-regular fa-bookmark' : 'fa-solid fa-bookmark'
+                !isBookmark ? 'fa-regular fa-bookmark' : 'fa-solid fa-bookmark'
               }
             />
           </div>
