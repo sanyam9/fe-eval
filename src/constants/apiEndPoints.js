@@ -4,18 +4,12 @@ export const GET_EVENTS = {
   method: 'GET',
 };
 
-// export const GET_RECORD_LIKES = (id) => ({
-//   url: `records/${id}/likes`,
-//   method: 'GET',
-//   headers: {
-//     Authorization: 'Bearer QWlzaHdhcnlhIE4=',
-//   },
-// });
+export const UPDATE_RECORD_LIKE = (id) => ({
+  url: `events/${id}`,
+  method: 'PATCH',
+});
 
-// export const UPDATE_RECORD_LIKE = (id) => ({
-//   url: `records/${id}/likes`,
-//   method: 'PATCH',
-//   headers: {
-//     Authorization: 'Bearer QWlzaHdhcnlhIE4=',
-//   },
-// });
+export const GET_EVENT_BY_ID = (id) => ({
+  url: `events/${id}`,
+  method: 'GET',
+})

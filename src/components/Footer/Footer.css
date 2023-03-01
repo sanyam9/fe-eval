@@ -6,10 +6,31 @@
   bottom: 0;
   height: 4vh;
   width: 100%;
+  display: flex;
+  gap: 10px
 }
 
 .footer p{
   color: white;
   font-weight: bold;
   font-size: x-large;
+}
+
+.footer button{
+  height: 30px;
+  width: 30px;
+  border-radius: 10px;
+  border:none;
+}
+
+.purple-btn{
+  background-color: purple;
+}
+
+.blue-btn{
+  background-color: blue;
+}
+
+.grey-btn{
+  background-color: grey;
 }
