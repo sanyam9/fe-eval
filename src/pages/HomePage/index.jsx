@@ -26,7 +26,7 @@ function HomePage() {
 
   const bookmarkedFilterHandler = () => {
     setFilteredEvents(
-      allEvents.filter((eachEvent) => eachEvent.isBookmarked === false),
+      allEvents.filter((eachEvent) => eachEvent.isBookmarked === true),
     );
   };
 
