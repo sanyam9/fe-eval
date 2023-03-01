@@ -11,6 +11,9 @@ function HomePage() {
   const [query, setQuery] = useState('');
   useEffect(() => {
     makeRequest(GET_EVENTS).then((response) => {
+      response.sort(function (a, b) {
+        return new Date(a.datetime) - new Date(b.datetime);
+      });
       setAllEvents(response);
       setFilteredEvents(response);
     });
