@@ -8,7 +8,7 @@ function HomePage() {
   const [allEvents, setAllEvents] = useState([]);
   const [filteredEvents, setFilteredEvents] = useState([]);
   const [showFilter, setShowFilter] = useState(true);
-
+  const [query, setQuery] = useState('');
   useEffect(() => {
     makeRequest(GET_EVENTS).then((response) => {
       setAllEvents(response);
@@ -69,7 +69,11 @@ function HomePage() {
             ></i>
           </div>
           <div className='search'>
-            <input type='text' placeholder='EVENT NAME' />
+            <input
+              type='text'
+              placeholder='EVENT NAME'
+              onChange={(event) => setQuery(event.target.value)}
+            />
             <i className='fa-solid fa-magnifying-glass'></i>
           </div>
         </div>
@@ -118,9 +122,17 @@ function HomePage() {
           </div>
         )}
         <div className='cards'>
-          {filteredEvents.map((eachCard) => (
-            <Card key={eachCard.id} {...eachCard} />
-          ))}
+          {filteredEvents
+            .filter((event) => {
+              if (query === '') return event;
+              else if (
+                event.name.toLowerCase().includes(query.toLocaleLowerCase())
+              )
+                return event;
+            })
+            .map((eachFilteredEvent) => (
+              <Card key={eachFilteredEvent.id} {...eachFilteredEvent} />
+            ))}
         </div>
       </header>
     </div>
