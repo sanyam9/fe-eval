@@ -1,0 +1,14 @@
+*{
+  margin: 0;
+}
+.header{
+  background-color: black;
+  padding: 10px 150px;
+  height: auto;
+}
+
+.header h1{
+  color: white;
+  font-family: Big Shoulders Inline Display;
+  font-size: xxx-large;
+}

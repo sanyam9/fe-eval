@@ -1,0 +1,40 @@
+.homepage-wrapper {
+  padding: 50px 150px;
+}
+
+.filter-search {
+  display: flex;
+  justify-content: space-between;
+  font-size: x-large;
+}
+
+.filter, .search {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.search > input{
+  border-radius: 10px;
+  border-width: 1px;
+  width: 15vw;
+  height: 3vh;
+  padding-left: 10px;
+}
+
+.search > i{
+  font-size: xx-large;
+}
+
+.filter-radiobuttons {
+  padding: 10px 0px;
+  display: flex;
+}
+
+.cards {
+  padding: 10px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
